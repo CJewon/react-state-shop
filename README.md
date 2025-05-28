@@ -1,12 +1,23 @@
-# React + Vite
+# FakeStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite를 이용한 개인 공부용 프로젝트
 
-Currently, two official plugins are available:
+## 목적
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. React 컴포넌트에 대한 이해
+2. React 렌더링 및 리렌더링 과정 이해
+3. API를 활용한 간단한 CRUD 구현
+4. React Router 도입 및 라우팅 이해
+5. 상태관리 라이브러리 도입 및 상태 관리 이해
+6. React Query 도입으로 데이터 페칭 이해
+7. SSR, CSR 도입 및 각각의 이해
 
-## Expanding the ESLint configuration
+## 현재 진행 사항
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 컴포넌트를 역할별로 분리하여 쇼핑몰 페이지를 제작 중입니다.
+- 추후 페이지별 파일 구조를 재정비하고, 공용 컴포넌트를 제외한 나머지 컴포넌트도 페이지별로 분리할 계획입니다.
+
+## 날짜별 진행 사항
+
+- 2025-05-28: 리스트 렌더링 및 정렬 기능 구현
+- 2025-05-29:
