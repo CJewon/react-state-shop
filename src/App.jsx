@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import MainPage from "./Pages/Main";
 import ProductListPage from "./Pages/ProductList";
@@ -8,23 +8,25 @@ import Layout from "./Components/Layout";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<MainPage></MainPage>}></Route>
-        <Route
-          path="/products"
-          element={<ProductListPage></ProductListPage>}
-        ></Route>
-        <Route
-          path="/products/:id"
-          element={<ProductDetailPage></ProductDetailPage>}
-        ></Route>
-        <Route
-          path="/register"
-          element={<ProductRegisterPage></ProductRegisterPage>}
-        ></Route>
-      </Routes>
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<MainPage></MainPage>}></Route>
+          <Route
+            path="/products"
+            element={<ProductListPage></ProductListPage>}
+          ></Route>
+          <Route
+            path="/products/:id"
+            element={<ProductDetailPage></ProductDetailPage>}
+          ></Route>
+          <Route
+            path="/register"
+            element={<ProductRegisterPage></ProductRegisterPage>}
+          ></Route>
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
