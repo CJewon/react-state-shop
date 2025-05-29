@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import { getProducts } from "../../Api/ProductApi";
-import SortButton from "../SortButton/SortButton";
+import { getProducts } from "@/Api/ProductApi";
+
+import SortButton from "./Components/SortButton";
 
 import styles from "./ProductList.module.css";
-import ProductItem from "../ProductItem/ProductItem";
+import ProductItem from "./Components/ProductItem";
 
 export default function ProductList() {
   const [productList, setProductList] = useState([]);

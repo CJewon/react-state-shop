@@ -1,4 +1,4 @@
-import ProductList from "./Components/ProductLIst/ProductList";
+import ProductList from "./Pages/ProductList";
 
 import "./App.css";
 
