@@ -7,7 +7,7 @@ import SortButton from "./Components/SortButton";
 import styles from "./ProductList.module.css";
 import ProductItem from "./Components/ProductItem";
 
-export default function ProductList() {
+export default function ProductListPage() {
   const [productList, setProductList] = useState([]);
   const [sortType, setSortType] = useState("default");
   const [loading, setLoading] = useState(true);

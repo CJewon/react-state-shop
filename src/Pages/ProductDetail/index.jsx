@@ -1,3 +1,3 @@
-export default function index() {
+export default function ProductDetailPage() {
   return <div>index</div>;
 }
