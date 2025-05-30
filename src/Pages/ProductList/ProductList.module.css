@@ -3,3 +3,9 @@
   margin: 0 auto;
   padding: 16px;
 }
+
+.sortWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0;
+}

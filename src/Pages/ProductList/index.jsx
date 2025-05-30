@@ -44,17 +44,19 @@ export default function ProductListPage() {
         return sorted;
     }
   };
-
+  console.log(productList);
   const sortedList = sortProducts(productList, sortType);
 
   if (loading) return <p>로딩 중...</p>;
   if (error) return <p>에러 : {error.message}</p>;
   return (
     <div>
-      <SortButton sortType={sortType} onChange={handleSortChange}></SortButton>
+      <div className={styles.sortWrapper}>
+        <SortButton sortType={sortType} onChange={handleSortChange} />
+      </div>
       <ul className={styles.ul}>
         {sortedList.map((product) => (
-          <ProductItem key={product.id} product={product}></ProductItem>
+          <ProductItem key={product.id} product={product} />
         ))}
       </ul>
     </div>
