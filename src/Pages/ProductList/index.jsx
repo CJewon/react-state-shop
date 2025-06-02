@@ -44,7 +44,7 @@ export default function ProductListPage() {
         return sorted;
     }
   };
-  console.log(productList);
+
   const sortedList = sortProducts(productList, sortType);
 
   if (loading) return <p>로딩 중...</p>;
