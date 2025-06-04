@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getProducts } from "@/Api/ProductApi";
+import { getProducts } from "@/Api/Product";
 
 import SortButton from "./Components/SortButton";
 
 import styles from "./ProductList.module.css";
 import ProductItem from "./Components/ProductItem";
 import { useDispatch } from "react-redux";
-import { getCarts } from "@/Api/CartApi";
+import { getCarts } from "@/Api/Cart";
 import { setCarts } from "@/features/cart/cartSlice";
 
 export default function ProductListPage() {

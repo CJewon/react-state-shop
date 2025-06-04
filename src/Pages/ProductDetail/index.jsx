@@ -1,9 +1,9 @@
-import { getProduct } from "@/Api/ProductApi";
+import { getProduct } from "@/Api/Product";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import styles from "./ProductDetail.module.css";
-import { getCarts, postCarts } from "@/Api/CartApi";
+import { getCarts, postCarts } from "@/Api/Cart";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, setCarts } from "@/features/cart/cartSlice";
