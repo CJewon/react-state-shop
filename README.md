@@ -62,7 +62,7 @@ React + Vite를 이용한 개인 공부용 프로젝트
 
 ---
 
-- 내가 생각한 해결 방향성
+#### 내가 생각한 해결 방향성
 
 1. redux 라이브러리를 활용해 cart에 담긴 리스트를 전역상태로 관리해주고 이를 바탕으로 ProductListPage, ProductDetailPage에서 유동적으로 활용 할 수 있을 것이라고 생각.
 
