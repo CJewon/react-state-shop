@@ -6,8 +6,13 @@ import SortButton from "./Components/SortButton";
 
 import styles from "./ProductList.module.css";
 import ProductItem from "./Components/ProductItem";
+import { useDispatch } from "react-redux";
+import { getCarts } from "@/Api/CartApi";
+import { setCarts } from "@/features/cart/cartSlice";
 
 export default function ProductListPage() {
+  const dispatch = useDispatch();
+
   const [productList, setProductList] = useState([]);
   const [sortType, setSortType] = useState("default");
   const [loading, setLoading] = useState(true);
@@ -15,8 +20,11 @@ export default function ProductListPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const products = await getProducts();
+        const [products, cart] = await Promise.all([getProducts(), getCarts()]);
         setProductList(products);
+
+        console.log(cart);
+        dispatch(setCarts(cart));
       } catch (error) {
         setError(error);
       } finally {
@@ -25,7 +33,7 @@ export default function ProductListPage() {
     }
 
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   const handleSortChange = (e) => {
     setSortType(e.target.value);
