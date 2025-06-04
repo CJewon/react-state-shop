@@ -41,6 +41,8 @@ React + Vite를 이용한 개인 공부용 프로젝트
 
 ### 2025-06-04
 
+- redux를 활용해 서버와 UI 업데이트에 대한 딜레이를 줄이고자 했지만 실패
+- redux보다는 react-query가 더 적합하다는 것을 알고 도입시도
 -
 
 ## Page
@@ -57,10 +59,17 @@ React + Vite를 이용한 개인 공부용 프로젝트
 
 - 증상 : 장바구니에 아이템 추가 시 알림이나 UI 업데이트가 느리게 반영
 - 원인 : 서버 API 요청이 완료된 후에야 상태가 업데이트되어 네트워크 지연 때문에 반응이 늦어짐
-- 내가 생각한 해결 방향성
-- 1. redux 라이브러리를 활용해 cart에 담긴 리스트를 전역상태로 관리해주고 이를 바탕으로 ProductListPage, ProductDetailPage에서 유동적으로 활용 할 수 있을 것이라고 생각.
-- => 생각과는 달리 ProductListPage, ProductDetailPage 에서의 cart 상태가 동기화가 안된 상태가 되어버림
-- => ProductListPage, ProductDetailPage의 cart 상태를 찍어보니 상태가 다른 것을 확인.
-- => 서버 상태와 UI 상태 간 데이터 일관성을 유지하기 위해서 redux 보단 react-query가 더 적합하다는 생각이 듦
 
-- 2. react-query를 활용해 API 함수 수정 및 낙관적 업데이트를 추가해 서버 상태와 UI 상태 간 데이터 일관성을 보장해 문제를 해결하고자 함.
+---
+
+- 내가 생각한 해결 방향성
+
+1. redux 라이브러리를 활용해 cart에 담긴 리스트를 전역상태로 관리해주고 이를 바탕으로 ProductListPage, ProductDetailPage에서 유동적으로 활용 할 수 있을 것이라고 생각.
+
+   => 생각과는 달리 ProductListPage, ProductDetailPage 에서의 cart 상태가 동기화가 안된 상태가 되어버림
+
+   => ProductListPage, ProductDetailPage의 cart 상태를 찍어보니 상태가 다른 것을 확인.
+
+   => 서버 상태와 UI 상태 간 데이터 일관성을 유지하기 위해서 redux 보단 react-query가 더 적합하다는 생각이 듦
+
+2. react-query를 활용해 API 함수 수정 및 낙관적 업데이트를 추가해 서버 상태와 UI 상태 간 데이터 일관성을 보장해 문제를 해결하고자 함.
