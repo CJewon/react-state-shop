@@ -1,0 +1,43 @@
+.signUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 320px;
+  padding: 32px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.signUpTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loginText {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.loginButton {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.loginButton:hover {
+  text-decoration: underline;
+}

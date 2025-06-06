@@ -7,6 +7,7 @@ import ProductRegisterPage from "./Pages/ProductRegister";
 import Layout from "./Components/Layout";
 import { ToastContainer } from "react-toastify";
 import Login from "./Pages/Auth/Login";
+import SignUp from "./Pages/Auth/SignUp";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             element={<ProductRegisterPage></ProductRegisterPage>}
           ></Route>
           <Route path="/auth/login" element={<Login></Login>}></Route>
+          <Route path="/auth/signUp" element={<SignUp></SignUp>}></Route>
         </Routes>
       </Layout>
     </BrowserRouter>
