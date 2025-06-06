@@ -1,6 +1,6 @@
 import axiosClientHelper from "@/utils/networks/axiosClientHelpers";
 
-// 전체 유저 목록
+// 모든 유저들의 정보
 export async function getUsers() {
   const response = await axiosClientHelper.get("/users");
   return response.data;
@@ -12,7 +12,7 @@ export async function getUser(id) {
   return response.data;
 }
 
-// 유저 추가
+// 회원가입
 export async function postUsers(data) {
   const response = await axiosClientHelper.post("/users", data);
   return response.data;
