@@ -24,6 +24,8 @@
 }
 
 .loginContainer {
+  display: flex;
+  gap: 16px;
   margin-top: 20px;
   text-align: center;
 }

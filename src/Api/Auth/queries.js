@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { userLogin } from "./index.";
+import { userLogin } from "./index";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -11,8 +11,8 @@ export function useLoginMutation() {
 
   return useMutation({
     mutationFn: userLogin,
-    onSuccess: (token) => {
-      localStorage.setItem("token", token);
+    onSuccess: (data) => {
+      localStorage.setItem("token", data.token);
       dispatch(login());
       navigate("/");
     },

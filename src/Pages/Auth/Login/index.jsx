@@ -6,13 +6,14 @@ import styles from "./LoginPage.module.css";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  const [userEmail, setUserEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const loginMutation = useLoginMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginMutation.mutate({ userEmail, password });
+    console.log("로그인 시도");
+    loginMutation.mutate({ username, password });
   };
 
   return (
@@ -22,8 +23,8 @@ export default function Login() {
         <Input
           type="email"
           placeholder="이메일"
-          value={userEmail}
-          onChange={(e) => setUserEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <Input
           type="password"
